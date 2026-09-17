@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h2>Calculadora</h2>
+
+    <input type="number" id="numero1" placeholder="Número 1">
+    <br><br>
+
+    <input type="number" id="numero2" placeholder="Número 2">
+    <br><br>
+
+    <button onclick="sumar()">+</button>
+    <button onclick="restar()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+
+    <h3>Resultado: <span id="resultado">0</span></h3>
+
+    <script>
+        function sumar() {
+            let a = Number(document.getElementById("numero1").value);
+            let b = Number(document.getElementById("numero2").value);
+
+            document.getElementById("resultado").textContent = a + b;
+        }
+
+        function restar() {
+            let a = Number(document.getElementById("numero1").value);
+            let b = Number(document.getElementById("numero2").value);
+
+            document.getElementById("resultado").textContent = a - b;
+        }
+
+        function multiplicar() {
+            let a = Number(document.getElementById("numero1").value);
+            let b = Number(document.getElementById("numero2").value);
+
+            document.getElementById("resultado").textContent = a * b;
+        }
+
+        function dividir() {
+            let a = Number(document.getElementById("numero1").value);
+            let b = Number(document.getElementById("numero2").value);
+
+            document.getElementById("resultado").textContent = a / b;
+        }
+    </script>
+
+</body>
+</html>
