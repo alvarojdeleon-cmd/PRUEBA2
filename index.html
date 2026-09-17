@@ -1,55 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h2>Calculadora</h2>
+    <div class="calculadora">
+        <h2>Calculadora</h2>
 
-    <input type="number" id="numero1" placeholder="Número 1">
-    <br><br>
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2">
 
-    <input type="number" id="numero2" placeholder="Número 2">
-    <br><br>
+        <div class="botones">
+            <button onclick="sumar()">+</button>
+            <button onclick="restar()">−</button>
+            <button onclick="multiplicar()">×</button>
+            <button onclick="dividir()">÷</button>
+        </div>
 
-    <button onclick="sumar()">+</button>
-    <button onclick="restar()">-</button>
-    <button onclick="multiplicar()">*</button>
-    <button onclick="dividir()">/</button>
+        <p>Resultado: <span id="resultado">0</span></p>
+    </div>
 
-    <h3>Resultado: <span id="resultado">0</span></h3>
-
-    <script>
-        function sumar() {
-            let a = Number(document.getElementById("numero1").value);
-            let b = Number(document.getElementById("numero2").value);
-
-            document.getElementById("resultado").textContent = a + b;
-        }
-
-        function restar() {
-            let a = Number(document.getElementById("numero1").value);
-            let b = Number(document.getElementById("numero2").value);
-
-            document.getElementById("resultado").textContent = a - b;
-        }
-
-        function multiplicar() {
-            let a = Number(document.getElementById("numero1").value);
-            let b = Number(document.getElementById("numero2").value);
-
-            document.getElementById("resultado").textContent = a * b;
-        }
-
-        function dividir() {
-            let a = Number(document.getElementById("numero1").value);
-            let b = Number(document.getElementById("numero2").value);
-
-            document.getElementById("resultado").textContent = a / b;
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
